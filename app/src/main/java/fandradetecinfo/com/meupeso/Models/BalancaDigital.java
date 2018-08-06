@@ -39,7 +39,7 @@ public class BalancaDigital extends _BaseModelSQLite implements Serializable  {
 
     public BalancaDigital(Context ctx) {
         super(ctx);
-        this.table = "balancadigital";
+        //this.table = "balancadigital";
     }
 
     public String getId_usuario() {

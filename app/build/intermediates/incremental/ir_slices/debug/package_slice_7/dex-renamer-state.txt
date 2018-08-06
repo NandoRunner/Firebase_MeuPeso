@@ -1,4 +1,4 @@
-#Wed Aug 01 19:54:31 BRT 2018
-base.0=E\:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\296
+#Mon Aug 06 16:42:07 BRT 2018
+base.0=E\:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\330
 path.0=classes.dex
 renamed.0=classes.dex

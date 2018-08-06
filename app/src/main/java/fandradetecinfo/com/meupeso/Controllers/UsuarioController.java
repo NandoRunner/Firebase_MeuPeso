@@ -60,7 +60,7 @@ public class UsuarioController extends _BaseController {
     public void init(Activity activity)
     {
         this.activity = activity;
-        this.model = new Usuario();
+        this.model = new Usuario(activity.getBaseContext());
 
         this.etNome = (EditText) activity.findViewById(R.id.txtUsrNome);
         this.etAltura = (EditText) activity.findViewById(R.id.txtUsrAltura);
@@ -82,6 +82,10 @@ public class UsuarioController extends _BaseController {
 
     public void setLstRegistro(List<Usuario> lstUsuario) {
         this.lstUsuario = lstUsuario;
+    }
+
+    public void setMapUsuario(Map<String, String> mapUsuario) {
+        this.mapUsuario = mapUsuario;
     }
 
     public Map<String, String> getMapUsuario() {

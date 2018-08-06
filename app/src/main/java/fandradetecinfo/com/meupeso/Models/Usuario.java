@@ -1,30 +1,47 @@
 package fandradetecinfo.com.meupeso.Models;
 
+import android.content.Context;
+import android.database.Cursor;
+
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import android.util.Log;
+import java.util.GregorianCalendar;
 
-public class Usuario  {
+/**
+ * Created by Fernando on 10/02/2017.
+ */
 
-    private String altura;
-    private Date data_nascimento;
-    private String nome;
-    private String sexo;
+public class Usuario extends _BaseModel implements Serializable  {
 
+    private long id;
     private String doc_id;
 
-    public Usuario() {
+    private String nome;
+    private String sexo;
+    private String altura;
+    private Date data_nascimento;
+
+    public long getId() {
+        return id;
     }
 
-    public Usuario(String altura, Date data_nascimento, String nome, String sexo) {
-        this.altura = altura;
-        this.data_nascimento = data_nascimento;
-        this.nome = nome;
-        this.sexo = sexo;
+    public String getDocId() {
+        return doc_id;
+    }
+
+    public void setDocId(String doc_id) {
+        this.doc_id = doc_id;
+    }
+
+    public Usuario(Context ctx)
+    {
+        super(ctx);
+        //this.table = "usuario";
     }
 
 
@@ -44,15 +61,11 @@ public class Usuario  {
         return data_nascimento;
     }
 
-    public String getDocId() {
-        return doc_id;
-    }
-	
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-     public void setSexo(String sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
@@ -64,10 +77,6 @@ public class Usuario  {
         this.data_nascimento = dataNascimento;
     }
 
-    public void setDocId(String doc_id) {
-        this.doc_id = doc_id;
-    }
-	
     public String getIdade() {
         try {
             return String.valueOf(calcularIdade(getDataFormatada(getDataNascimento())));
@@ -88,6 +97,21 @@ public class Usuario  {
         }
     }
 
+//    public Cursor exibirRegistros()
+//    {
+//        try
+//        {
+//            String sql = "SELECT id, nome, altura, data_nascimento, "
+//                    + " case when " +
+//                    "sexo_masculino = 1 then 'M' else 'F' end as sexo"
+//                    + " FROM usuario"
+//                    + " ORDER BY id";
+//            return buscarCursor(sql);
+//        } catch (Exception ex) {
+//            throw ex;
+//        }
+//    }
+
     public String contaDias(String dataInicialBR, String dataFinalBR) throws ParseException {
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         df.setLenient(false);
@@ -105,26 +129,5 @@ public class Usuario  {
         BigDecimal ano = new BigDecimal(365.25);
         BigDecimal idade = qtdDias.divide(ano,0, RoundingMode.DOWN);
         return idade;
-    }
-
-    public String getDataDiaBr() {
-        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-        String diaIguana = df.format(new Date());
-        return diaIguana;
-    }
-
-    public Date getDataTimestamp(String pData)
-    {
-        try {
-            SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-            return formato.parse(pData);
-        } catch (ParseException pe) {
-            pe.printStackTrace();
-            Date d = new Date("01/01/1900");
-            return d;
-        } catch (Exception e) {
-            Log.d("logX", e.getMessage());
-            throw e;
-        }
     }
 }

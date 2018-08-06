@@ -11,10 +11,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.DocumentSnapshot;
 
@@ -33,7 +37,7 @@ public class Fragment01 extends _BaseFragment
 {
     PrefsHandler prefs;
 
-    List<BalancaDigital> lstRegistro = new ArrayList<BalancaDigital>();
+    private List<BalancaDigital> listRegistro = new ArrayList<BalancaDigital>();
 
     ListView minhaLista;
 
@@ -55,17 +59,43 @@ public class Fragment01 extends _BaseFragment
 		minhaLista = (ListView) vw.findViewById(R.id.lstRegistro);
         registerForContextMenu(minhaLista);
 
+        FirebaseFirestore.getInstance().collection(TAG)
+                .addSnapshotListener(new EventListener<QuerySnapshot>() {
+                    public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
+                        try {
+                            if (e != null) {
+                                Log.d("LogX Firelog", "Exception", e);
+                            }
+                            boolean achou = false;
+                            for (DocumentChange doc : documentSnapshots.getDocumentChanges()) {
+                                if ((doc.getType() == DocumentChange.Type.ADDED)
+                                        || (doc.getType() == DocumentChange.Type.REMOVED)
+                                        || (doc.getType() == DocumentChange.Type.MODIFIED)) {
+                                    achou = true;
+                                }
+
+                            }
+                            if (achou) {
+                                carregarLista();
+                            }
+
+                        }catch (Exception ex)
+                        {
+                            Toast.makeText(getActivity(), ex.getMessage(), Toast.LENGTH_LONG);
+                        }
+                    }
+                });
+
         BalancaDigitalController.getInstance().init(getActivity());
 
         return vw;
     }
     @Override
     public void onResume() {
-        carregaLista();
         super.onResume();
     }
 	
-	private void carregaLista()
+	private void carregarLista()
     {
         FirebaseFirestore.getInstance().collection(TAG)
                 .get()
@@ -74,7 +104,7 @@ public class Fragment01 extends _BaseFragment
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
 
-                            lstRegistro.clear();
+                            listRegistro.clear();
 
                             for (DocumentSnapshot document : task.getResult()) {
 
@@ -90,12 +120,12 @@ public class Fragment01 extends _BaseFragment
                                 reg.setId_usuario(dataToLoad.get("id_usuario").toString());
                                 reg.setData_registro((Date)dataToLoad.get("data_registro"));
 
-                                lstRegistro.add(reg);
+                                listRegistro.add(reg);
 
                                 Log.d("LogX " + TAG, document.getId() + " => " + document.getData());
                             }
 
-                            RegistroAdapter adapter = new RegistroAdapter(lstRegistro, getActivity());
+                            RegistroAdapter adapter = new RegistroAdapter(listRegistro, getActivity());
 
                             minhaLista.setAdapter(adapter);
                         } else {

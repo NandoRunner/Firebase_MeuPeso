@@ -4,9 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
@@ -14,9 +13,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
@@ -24,21 +27,24 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
+import java.util.Hashtable;
 import java.util.List;
+import java.util.Map;
 
 import fandradetecinfo.com.meupeso.Controllers.UsuarioController;
 import fandradetecinfo.com.meupeso.MainActivity;
 import fandradetecinfo.com.meupeso.Models.Usuario;
 import fandradetecinfo.com.meupeso.R;
-import fandradetecinfo.com.meupeso.UsuarioListAdapter;
+import fandradetecinfo.com.meupeso.UsuarioAdapter;
 
 public class Fragment00 extends _BaseFragment {
 
-    private RecyclerView recyclerView;
 
-    private List<Usuario> listUsuario;
-    private UsuarioListAdapter uAdapter;
+    private List<Usuario> listUsuario = new ArrayList<Usuario>();
+
+
+    ListView minhaLista;
+	
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
@@ -53,69 +59,27 @@ public class Fragment00 extends _BaseFragment {
                 tratarAdicionarUsuario();
             }
         });
-
 		
-		listUsuario = new ArrayList<>();
-
-        uAdapter = new UsuarioListAdapter(listUsuario);
-
-        recyclerView = (RecyclerView) vw.findViewById(R.id.usuario_list);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-
-        recyclerView.setAdapter(uAdapter);
+		minhaLista = (ListView) vw.findViewById(R.id.usuario_list);
+        registerForContextMenu(minhaLista);
 
         FirebaseFirestore.getInstance().collection(TAG)
-                .orderBy("nome")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
                         try {
                             if (e != null) {
                                 Log.d("LogX Firelog", "Exception", e);
                             }
-
+                            boolean achou = false;
                             for (DocumentChange doc : documentSnapshots.getDocumentChanges()) {
-                                if (doc.getType() == DocumentChange.Type.ADDED) {
-                                    Usuario usuario = doc.getDocument().toObject(Usuario.class);
-                                    usuario.setDocId(doc.getDocument().getId());
-                                    usuario.setDataNascimento((Date)doc.getDocument().get("data_nascimento"));
-                                    listUsuario.add(usuario);
-                                    uAdapter.notifyDataSetChanged();
-
+                                if ((doc.getType() == DocumentChange.Type.ADDED)
+                                    || (doc.getType() == DocumentChange.Type.REMOVED)
+                                    || (doc.getType() == DocumentChange.Type.MODIFIED)) {
+                                    achou = true;
                                 }
-                                else if (doc.getType() == DocumentChange.Type.REMOVED) {
-
-                                    Usuario uRemovido = doc.getDocument().toObject(Usuario.class);
-                                    uRemovido.setDocId(doc.getDocument().getId());
-
-                                    Iterator<Usuario> itr = listUsuario.iterator();
-                                    while (itr.hasNext()) {
-                                        Usuario usuario = itr.next();
-                                        if (usuario.getDocId().equals(uRemovido.getDocId())) {
-                                            itr.remove();
-                                        }
-                                    }
-                                    uAdapter.notifyDataSetChanged();
-                                }
-                                else if (doc.getType() == DocumentChange.Type.MODIFIED) {
-
-                                    Usuario uModificado = doc.getDocument().toObject(Usuario.class);
-                                    uModificado.setDocId(doc.getDocument().getId());
-                                    uModificado.setDataNascimento((Date)doc.getDocument().get("data_nascimento"));
-
-                                    for (int i = 0; i < listUsuario.size(); i++)
-                                    {
-                                        if (listUsuario.get(i).getDocId().equals(uModificado.getDocId()))
-                                        {
-                                            listUsuario.get(i).setNome(uModificado.getNome());
-                                            listUsuario.get(i).setAltura(uModificado.getAltura());
-                                            listUsuario.get(i).setSexo(uModificado.getSexo());
-                                            listUsuario.get(i).setDataNascimento(uModificado.getDataNascimento());
-                                        }
-                                    }
-                                    uAdapter.notifyDataSetChanged();
-                                }
-
+                            }
+                            if (achou) {
+                                carregarLista();
                             }
                         }catch (Exception ex)
                         {
@@ -123,6 +87,9 @@ public class Fragment00 extends _BaseFragment {
                         }
                     }
                 });
+
+        UsuarioController.getInstance().init(getActivity());
+
         return vw;
     }
 
@@ -167,7 +134,61 @@ public class Fragment00 extends _BaseFragment {
     public void onResume() {
         super.onResume();
     }
-	
+
+    private void carregarLista()
+    {
+        FirebaseFirestore.getInstance().collection(TAG)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+
+                            listUsuario.clear();
+
+                            for (DocumentSnapshot document : task.getResult()) {
+
+                                Usuario usuario = new Usuario(getContext());
+
+                                Map<String, Object> dataToLoad = document.getData();
+
+                                usuario.setNome(dataToLoad.get("nome").toString());
+                                usuario.setAltura(dataToLoad.get("altura").toString());
+                                usuario.setSexo(dataToLoad.get("sexo").toString());
+                                usuario.setDataNascimento((Date)dataToLoad.get("data_nascimento"));
+                                usuario.setDocId(document.getId());
+
+                                UsuarioController.getInstance().getMapUsuario().put(
+                                        dataToLoad.get("nome").toString(),
+                                        document.getId());
+
+                                listUsuario.add(usuario);
+
+                                Log.d("LogX " + TAG, document.getId() + " => " + document.getData());
+                            }
+
+                            //montarMapUsuario();
+
+                            UsuarioAdapter adapter = new UsuarioAdapter(listUsuario, getActivity());
+
+                            minhaLista.setAdapter(adapter);
+                        } else {
+                            Log.d("LogX " + TAG, "Error getting documents: ", task.getException());
+                        }
+                    }
+                });
+    }
+    private void montarMapUsuario()
+    {
+        Map<String, String> mapUsuario = new Hashtable<>();
+
+        for(Usuario u : listUsuario)
+        {
+            mapUsuario.put(u.getNome(), u.getDocId());
+        }
+        UsuarioController.getInstance().setMapUsuario(mapUsuario);
+
+    }
 
     private void tratarAdicionarUsuario()
     {
@@ -197,8 +218,7 @@ public class Fragment00 extends _BaseFragment {
     }
 
     private void apagarUsuario(String id) {
-        UsuarioController.getInstance().init(getActivity());
-		
+
 		try {
             UsuarioController.getInstance().getModel().setDocId(id);
             UsuarioController.getInstance().apagar();
