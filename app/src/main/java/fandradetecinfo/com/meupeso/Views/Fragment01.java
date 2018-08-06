@@ -37,14 +37,18 @@ public class Fragment01 extends _BaseFragment
 {
     PrefsHandler prefs;
 
-    private List<BalancaDigital> listRegistro = new ArrayList<BalancaDigital>();
-
-    ListView minhaLista;
+    public static List<BalancaDigital> listRegistro = new ArrayList<BalancaDigital>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
+        super.onCreateView(inflater, container, savedInstanceState);
+
         TAG = "BalancaDigital";
+
+        this.initListener();
+
+        BalancaDigitalController.getInstance().init(getActivity());
 
         View vw = inflater.inflate(R.layout.frag_01, container, false);
 
@@ -59,43 +63,15 @@ public class Fragment01 extends _BaseFragment
 		minhaLista = (ListView) vw.findViewById(R.id.lstRegistro);
         registerForContextMenu(minhaLista);
 
-        FirebaseFirestore.getInstance().collection(TAG)
-                .addSnapshotListener(new EventListener<QuerySnapshot>() {
-                    public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
-                        try {
-                            if (e != null) {
-                                Log.d("LogX Firelog", "Exception", e);
-                            }
-                            boolean achou = false;
-                            for (DocumentChange doc : documentSnapshots.getDocumentChanges()) {
-                                if ((doc.getType() == DocumentChange.Type.ADDED)
-                                        || (doc.getType() == DocumentChange.Type.REMOVED)
-                                        || (doc.getType() == DocumentChange.Type.MODIFIED)) {
-                                    achou = true;
-                                }
-
-                            }
-                            if (achou) {
-                                carregarLista();
-                            }
-
-                        }catch (Exception ex)
-                        {
-                            Toast.makeText(getActivity(), ex.getMessage(), Toast.LENGTH_LONG);
-                        }
-                    }
-                });
-
-        BalancaDigitalController.getInstance().init(getActivity());
-
         return vw;
     }
     @Override
     public void onResume() {
         super.onResume();
     }
-	
-	private void carregarLista()
+
+    @Override
+    protected void carregarLista()
     {
         FirebaseFirestore.getInstance().collection(TAG)
                 .get()

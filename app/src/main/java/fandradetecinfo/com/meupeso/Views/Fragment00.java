@@ -39,16 +39,18 @@ import fandradetecinfo.com.meupeso.UsuarioAdapter;
 
 public class Fragment00 extends _BaseFragment {
 
+    public static List<Usuario> listUsuario = new ArrayList<Usuario>();
 
-    private List<Usuario> listUsuario = new ArrayList<Usuario>();
-
-
-    ListView minhaLista;
-	
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
+        super.onCreateView(inflater, container, savedInstanceState);
+
         TAG = "Usuario";
+
+        this.initListener();
+
+        UsuarioController.getInstance().init(getActivity());
 
         View vw = inflater.inflate(R.layout.frag_00, container, false);
 
@@ -63,32 +65,6 @@ public class Fragment00 extends _BaseFragment {
 		minhaLista = (ListView) vw.findViewById(R.id.usuario_list);
         registerForContextMenu(minhaLista);
 
-        FirebaseFirestore.getInstance().collection(TAG)
-                .addSnapshotListener(new EventListener<QuerySnapshot>() {
-                    public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
-                        try {
-                            if (e != null) {
-                                Log.d("LogX Firelog", "Exception", e);
-                            }
-                            boolean achou = false;
-                            for (DocumentChange doc : documentSnapshots.getDocumentChanges()) {
-                                if ((doc.getType() == DocumentChange.Type.ADDED)
-                                    || (doc.getType() == DocumentChange.Type.REMOVED)
-                                    || (doc.getType() == DocumentChange.Type.MODIFIED)) {
-                                    achou = true;
-                                }
-                            }
-                            if (achou) {
-                                carregarLista();
-                            }
-                        }catch (Exception ex)
-                        {
-                            Toast.makeText(getActivity(), ex.getMessage(), Toast.LENGTH_LONG);
-                        }
-                    }
-                });
-
-        UsuarioController.getInstance().init(getActivity());
 
         return vw;
     }
@@ -135,7 +111,8 @@ public class Fragment00 extends _BaseFragment {
         super.onResume();
     }
 
-    private void carregarLista()
+    @Override
+    protected void carregarLista()
     {
         FirebaseFirestore.getInstance().collection(TAG)
                 .get()

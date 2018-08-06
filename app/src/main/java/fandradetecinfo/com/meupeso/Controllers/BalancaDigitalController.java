@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -27,6 +28,7 @@ import fandradetecinfo.com.meupeso.MainActivity;
 import fandradetecinfo.com.meupeso.Models.BalancaDigital;
 import fandradetecinfo.com.meupeso.R;
 import fandradetecinfo.com.meupeso.Relatorio;
+import fandradetecinfo.com.meupeso.Views.Fragment01;
 
 public class BalancaDigitalController extends _BaseController {
 
@@ -174,41 +176,56 @@ public class BalancaDigitalController extends _BaseController {
         ArrayList<String> list=new ArrayList<String>();
         ArrayAdapter adapter=new ArrayAdapter<String>(activity, android.R.layout.simple_spinner_item,list);
 
-        model.open();
+        //model.open();
         try
         {
-            Cursor c;
+            //Cursor c;
             int maxcol = 5;
 
             switch (rel)
             {
                 case Registros:
-                    c = model.exibirRegistros(MainActivity.usuario);
+                    //c = model.exibirRegistros(MainActivity.usuario);
                     break;
 
                 case Medias:
-                    c = model.exibirMedias(MainActivity.usuario);
+                    //c = model.exibirMedias(MainActivity.usuario);
                     break;
 
                 default:
-                    c = model.exibirTotais();
+                    //c = model.exibirTotais();
                     maxcol = 6;
                     break;
             }
 
-            if(c.moveToFirst())
+            Iterator<BalancaDigital> regIterator = Fragment01.listRegistro.iterator();
+
+//            if(c.moveToFirst())
+//            {
+//                do
+//                {
+//                    for (int i = 0; i < maxcol; i++) {
+//
+//                        if (c.getColumnName(i).equals("sexo"))
+//                            list.add(mapSexo.get(Integer.valueOf(c.getString(i))));
+//                        else
+//                            list.add(c.getString(i));
+//                    }
+//                    gridView.setAdapter(adapter);
+//                }while(c.moveToNext());
+//            }
+            if(regIterator.hasNext())
             {
-                do
-                {
-                    for (int i = 0; i < maxcol; i++) {
-                        
-						if (c.getColumnName(i).equals("sexo"))
-							list.add(mapSexo.get(Integer.valueOf(c.getString(i))));
-						else
-							list.add(c.getString(i));
-                    }
+                while (regIterator.hasNext()) {
+
+                    BalancaDigital reg = regIterator.next();
+                    list.add(reg.getDataFormatada(reg.getData_registro()).toString());
+                    list.add(reg.getPeso());
+                    list.add(reg.getGordura());
+                    list.add(reg.getHidratacao());
+                    list.add(reg.getMusculo());
                     gridView.setAdapter(adapter);
-                }while(c.moveToNext());
+                }
             }
             else
             {
@@ -220,7 +237,7 @@ public class BalancaDigitalController extends _BaseController {
             Toast.makeText(activity, e.getMessage(), Toast.LENGTH_LONG).show();
             Log.i("LogX", e.getMessage());
         }
-        model.close();
+        //model.close();
     }
 
 }

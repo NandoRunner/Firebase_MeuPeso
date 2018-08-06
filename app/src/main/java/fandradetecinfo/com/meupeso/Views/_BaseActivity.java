@@ -13,7 +13,7 @@ import java.util.TimeZone;
 
 import fandradetecinfo.com.meupeso.R;
 
-public class _BaseActivity extends AppCompatActivity {
+public abstract class _BaseActivity extends AppCompatActivity {
 
     protected Spinner mySpinner;
     protected EditText myEdit;

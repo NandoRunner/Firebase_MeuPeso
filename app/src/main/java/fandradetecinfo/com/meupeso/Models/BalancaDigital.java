@@ -99,19 +99,6 @@ public class BalancaDigital extends _BaseModelSQLite implements Serializable  {
         this.osso = osso.replace(',', '.');
     }
 
-    public Cursor exibirRegistros()
-    {
-        try
-        {
-            String sql = "SELECT id_usuario, data_registro, peso"
-                    + " FROM balancadigital"
-                    + " ORDER BY data_registro desc";
-            return buscarCursor(sql);
-        } catch (Exception ex) {
-            throw ex;
-        }
-    }
-
     public Cursor exibirRegistros(String usuario)
     {
         try

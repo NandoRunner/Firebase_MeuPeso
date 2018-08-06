@@ -16,12 +16,12 @@
         "source": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\src\\main\\res\\layout\\cell_image_button.xml"
     },
     {
-        "merged": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_small_material.xml.flat",
-        "source": "C:\\Users\\Fernando\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\0d0a963dc0d183cf82f89f3cad986a7c\\res\\drawable\\abc_ratingbar_small_material.xml"
-    },
-    {
         "merged": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_registro.xml.flat",
         "source": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\src\\main\\res\\layout\\content_registro.xml"
+    },
+    {
+        "merged": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_small_material.xml.flat",
+        "source": "C:\\Users\\Fernando\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\0d0a963dc0d183cf82f89f3cad986a7c\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
     {
         "merged": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\res\\merged\\debug\\xml_backup_descriptor.xml.flat",
@@ -64,24 +64,24 @@
         "source": "C:\\Users\\Fernando\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\0d0a963dc0d183cf82f89f3cad986a7c\\res\\drawable-xxhdpi-v4\\abc_btn_rating_star_on_mtrl_alpha.png"
     },
     {
-        "merged": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\Fernando\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\0d0a963dc0d183cf82f89f3cad986a7c\\res\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
         "merged": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Fernando\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\0d0a963dc0d183cf82f89f3cad986a7c\\res\\drawable-xhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\Fernando\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\0d0a963dc0d183cf82f89f3cad986a7c\\res\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_rating_star_off_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Fernando\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\0d0a963dc0d183cf82f89f3cad986a7c\\res\\drawable-xxhdpi-v4\\abc_btn_rating_star_off_mtrl_alpha.png"
     },
     {
-        "merged": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
-        "source": "C:\\Users\\Fernando\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\0d0a963dc0d183cf82f89f3cad986a7c\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_16dp.png"
-    },
-    {
         "merged": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "C:\\Users\\Fernando\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\0d0a963dc0d183cf82f89f3cad986a7c\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
+        "source": "C:\\Users\\Fernando\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\0d0a963dc0d183cf82f89f3cad986a7c\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
         "merged": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",

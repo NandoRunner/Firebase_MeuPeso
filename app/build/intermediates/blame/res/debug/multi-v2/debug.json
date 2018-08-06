@@ -1,6 +1,22 @@
 {
     "logs": [
         {
+            "outputFile": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\res\\merged\\debug\\values-v23_values-v23.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Fernando\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\0d0a963dc0d183cf82f89f3cad986a7c\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,19,32,33,34,35",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1277,2079,2184,2299,2406",
+                        "endLines": "2,3,4,5,18,31,32,33,34,35",
+                        "endColumns": "134,134,74,86,12,12,104,114,106,112",
+                        "endOffsets": "185,320,395,482,1272,2074,2179,2294,2401,2514"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\res\\merged\\debug\\values-zh-rCN_values-zh-rCN.arsc.flat",
             "map": [
                 {
@@ -35,22 +51,6 @@
                         "startOffsets": "105,201,308,431,526,626,708,805,911,987,1063,1141,1237,1333,1428,1525,1620,1718,1830,2082",
                         "endColumns": "95,106,122,94,99,81,96,105,75,75,77,95,95,94,96,94,97,111,93,100",
                         "endOffsets": "196,303,426,521,621,703,800,906,982,1058,1136,1232,1328,1423,1520,1615,1713,1825,1919,2178"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\res\\merged\\debug\\values-v23_values-v23.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\Fernando\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\0d0a963dc0d183cf82f89f3cad986a7c\\res\\values-v23\\values-v23.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,19,32,33,34,35",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,190,325,400,487,1277,2079,2184,2299,2406",
-                        "endLines": "2,3,4,5,18,31,32,33,34,35",
-                        "endColumns": "134,134,74,86,12,12,104,114,106,112",
-                        "endOffsets": "185,320,395,482,1272,2074,2179,2294,2401,2514"
                     }
                 }
             ]

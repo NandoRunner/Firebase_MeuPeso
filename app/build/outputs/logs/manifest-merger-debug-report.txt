@@ -4,6 +4,7 @@ ADDED from E:\OneDrive\Documents\Fernando\Projs\FAndradeTecInfo\_Android\_Fireba
 INJECTED from E:\OneDrive\Documents\Fernando\Projs\FAndradeTecInfo\_Android\_Firebase\MeuPeso\app\src\main\AndroidManifest.xml:2:1-39:12
 INJECTED from E:\OneDrive\Documents\Fernando\Projs\FAndradeTecInfo\_Android\_Firebase\MeuPeso\app\src\main\AndroidManifest.xml:2:1-39:12
 INJECTED from E:\OneDrive\Documents\Fernando\Projs\FAndradeTecInfo\_Android\_Firebase\MeuPeso\app\src\main\AndroidManifest.xml:2:1-39:12
+MERGED from [:myjavacorelib] E:\OneDrive\Documents\Fernando\Projs\FAndradeTecInfo\_Android\_Firebase\MeuPeso\myjavacorelib\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:design:23.4.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\design-23.4.0.aar\c011238a3a4a5160cf4db714547487d1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.4.0.aar\0d0a963dc0d183cf82f89f3cad986a7c\AndroidManifest.xml:17:1-27:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\25220dc2d633bc8b9e7ed8c951d9e249\AndroidManifest.xml:2:1-11:12
@@ -161,6 +162,8 @@ uses-sdk
 INJECTED from E:\OneDrive\Documents\Fernando\Projs\FAndradeTecInfo\_Android\_Firebase\MeuPeso\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\OneDrive\Documents\Fernando\Projs\FAndradeTecInfo\_Android\_Firebase\MeuPeso\app\src\main\AndroidManifest.xml
 INJECTED from E:\OneDrive\Documents\Fernando\Projs\FAndradeTecInfo\_Android\_Firebase\MeuPeso\app\src\main\AndroidManifest.xml
+MERGED from [:myjavacorelib] E:\OneDrive\Documents\Fernando\Projs\FAndradeTecInfo\_Android\_Firebase\MeuPeso\myjavacorelib\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:myjavacorelib] E:\OneDrive\Documents\Fernando\Projs\FAndradeTecInfo\_Android\_Firebase\MeuPeso\myjavacorelib\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:design:23.4.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\design-23.4.0.aar\c011238a3a4a5160cf4db714547487d1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:design:23.4.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\design-23.4.0.aar\c011238a3a4a5160cf4db714547487d1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.4.0.aar\0d0a963dc0d183cf82f89f3cad986a7c\AndroidManifest.xml:21:5-23:78
