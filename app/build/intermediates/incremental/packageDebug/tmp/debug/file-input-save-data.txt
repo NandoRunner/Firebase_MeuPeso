@@ -1,0 +1,19 @@
+#Internal package file, do not edit.
+#Wed Aug 01 19:54:32 BRT 2018
+1.base=E\:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\301
+2.path=classes.dex
+0.baseType=DIRECTORY
+3.baseType=DIRECTORY
+2.base=E\:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\303
+3.set=DEX
+2.set=DEX
+1.baseType=DIRECTORY
+3.path=classes.dex
+count=4
+1.set=DEX
+0.path=classes.dex
+3.base=E\:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\300
+0.set=DEX
+0.base=E\:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\302
+2.baseType=DIRECTORY
+1.path=classes.dex

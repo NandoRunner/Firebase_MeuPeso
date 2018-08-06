@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="bottom"
+            android:inputType="none"
+            android:text="Usuário:"
+            android:textAppearance="@android:style/TextAppearance.Holo.Large"
+            android:textColor="@color/colorPrimaryDark"
+            tools:ignore="HardcodedText"
+            tools:textAlignment="gravity" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="bottom"
+            android:inputType="none"
+            android:text="Data:"
+            android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+            android:textColor="@color/colorPrimaryDark"
+            tools:ignore="HardcodedText"
+            tools:textAlignment="gravity" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="bottom"
+            android:inputType="none"
+            android:maxLines="1"
+            android:text="Peso (Kg):"
+            android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+            android:textColor="@color/colorPrimaryDark"
+            tools:ignore="HardcodedText"
+            tools:textAlignment="gravity" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtRegUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Large Text"
+            android:textAppearance="@android:style/TextAppearance.Holo.Large" />
+
+        <TextView
+            android:id="@+id/txtRegData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medium Text"
+            android:textAppearance="@android:style/TextAppearance.Holo.Medium" />
+
+        <TextView
+            android:id="@+id/txtRegPeso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medium Text"
+            android:textAppearance="@android:style/TextAppearance.Holo.Medium" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+    </LinearLayout>
+</LinearLayout>

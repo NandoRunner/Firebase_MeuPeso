@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_light"
+    android:orientation="horizontal"
+    android:id="@+id/layFrag03"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@+id/tvFrag03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+	android:layout_marginTop="25dp"
+        android:text="@string/textview"
+        android:layout_centerHorizontal="true" />
+
+    <GridView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvFrag03"
+        android:layout_centerHorizontal="true"
+        android:numColumns="5"
+        android:id="@+id/grvFrag03Header"
+        android:stretchMode="columnWidth" />
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/grvFrag03Header"
+        android:id="@+id/grvFrag03"
+        android:fastScrollAlwaysVisible="true"
+        android:fastScrollEnabled="true"
+        android:numColumns="5"
+        tools:style="@android:style/Widget.Material.GridView"
+        android:stretchMode="columnWidth"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+    </GridView>
+
+</RelativeLayout>

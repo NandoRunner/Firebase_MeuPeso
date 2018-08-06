@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Meu Peso Diário</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="user_prompt">Usuário</string>
+    <string name="textview">TextView</string>
+    <string name="cadastar_usuario">Cadastar Usuário</string>
+    <string name="adicionar_usuario">adicionar usuário</string>
+    <string name="usr_altura">1.87</string>
+    <string name="usrData">1/1/1980</string>
+    <string name="txt_sexo">Sexo</string>
+    <string name="txt_altura">Altura</string>
+    <string name="txt_data">Data de Nascimento</string>
+    <string name="txt_nome">Nome</string>
+    <string name="usr_nome">Nome</string>
+    <string name="salvar_usuario">Salvar</string>
+    <string name="salvar_registro">Salvar</string>
+    <string-array name="user_arrays">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="list_sexo">
+        <item>-- Selecione o Sexo --</item>
+        <item>Masculino</item>
+        <item>Feminino</item>
+    </string-array>
+    <string name="title_activity_user">User</string>
+    <string name="title_activity_my_user">MyUser</string>
+    <string name="title_activity_initial">InitialActivity</string>
+    <string name="data_de_nascimento">Data de Nascimento</string>
+    <string name="nome">Nome</string>
+    <string name="altura">Altura</string>
+    <string name="textview03">TextView</string>
+    <string name="l_text">L Text</string>
+    <string name="m_text">M Text</string>
+    <string name="m_text2">M Text</string>
+</resources>

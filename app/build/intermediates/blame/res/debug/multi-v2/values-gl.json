@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-gl\\values-gl.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Fernando\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.8.0.aar\\e928a3aaacc0bcd8d60ea2d3165c513f\\res\\values-gl\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "283",
+                        "endColumns": "192",
+                        "endOffsets": "475"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "105",
+                        "endColumns": "192",
+                        "endOffsets": "293"
+                    }
+                }
+            ]
+        }
+    ]
+}

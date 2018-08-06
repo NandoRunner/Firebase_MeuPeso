@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:theme="@style/AppTheme"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="fandradetecinfo.com.meupeso.Views.RegistroActivity"
+    tools:showIn="@layout/activity_registro">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollViewBalancaDigital" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvBalanca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Balança Digital"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:ignore="HardcodedText" />
+
+    <Space
+        android:id="@+id/spc01"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/mainLayout1" />
+
+    <Space
+        android:id="@+id/spc02"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/btnGravar"
+        tools:ignore="UnknownId" />
+
+    <LinearLayout
+        android:id="@+id/mainLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvBalanca"
+        android:gravity="center_vertical|center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:gravity="bottom"
+                android:inputType="none"
+                android:text="Usuário"
+                tools:ignore="HardcodedText"
+                tools:textAlignment="gravity" />
+
+            <TextView
+                android:id="@+id/editText2"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:gravity="bottom"
+                android:inputType="none"
+                android:text="Data"
+                tools:ignore="HardcodedText"
+                tools:textAlignment="gravity" />
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:gravity="bottom"
+                android:inputType="none"
+                android:maxLines="1"
+                android:text="Peso (Kg)"
+                tools:ignore="HardcodedText"
+                tools:textAlignment="gravity" />
+
+            <TextView
+                android:id="@+id/editText4"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:gravity="bottom"
+                android:inputType="none"
+                android:maxLines="1"
+                android:text="Gordura (%)"
+                tools:ignore="HardcodedText"
+                tools:textAlignment="gravity" />
+
+            <TextView
+                android:id="@+id/editText5"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:gravity="bottom"
+                android:inputType="none"
+                android:maxLines="1"
+                android:text="Hidratação (%)"
+                tools:ignore="HardcodedText"
+                tools:textAlignment="gravity" />
+
+            <TextView
+                android:id="@+id/editText6"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:gravity="bottom"
+                android:inputType="none"
+                android:maxLines="1"
+                android:text="Músculo (Kg)"
+                tools:ignore="HardcodedText"
+                tools:textAlignment="gravity" />
+
+            <TextView
+                android:id="@+id/editText7"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:gravity="bottom"
+                android:inputType="none"
+                android:maxLines="1"
+                android:text="Osso (Kg)"
+                tools:ignore="HardcodedText"
+                tools:textAlignment="gravity" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Spinner
+
+                    android:id="@+id/spinnerUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:ems="10"
+                    android:entries="@array/user_arrays"
+                    android:focusable="true"
+                    android:prompt="@string/user_prompt"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtData"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/txtPeso"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/txtGordura"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/txtHidratacao"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/txtMusculo"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/txtOsso"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+    </LinearLayout>
+            </RelativeLayout>
+        </FrameLayout>
+   </ScrollView>
+</RelativeLayout>
