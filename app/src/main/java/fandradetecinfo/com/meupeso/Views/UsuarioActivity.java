@@ -78,7 +78,9 @@ public class UsuarioActivity extends _BaseActivity
         try
         {
             UsuarioController.getInstance().init(this);
-			
+
+            //todo verificar se usuário já existe
+
             if(!UsuarioController.getInstance().validarDados()) return false;
 
             UsuarioController.getInstance().pegarDoFormulario();

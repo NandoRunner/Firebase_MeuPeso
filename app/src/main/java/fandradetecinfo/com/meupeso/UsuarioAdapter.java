@@ -3,10 +3,8 @@ package fandradetecinfo.com.meupeso;
 import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import fandradetecinfo.com.meupeso.Models.Usuario;
@@ -58,7 +56,7 @@ public class UsuarioAdapter extends _BaseAdapter {
         tratarCores(linha, position);
 					
         nome.setText(usuario.getNome());
-        altura.setText(usuario.getAltura());
+        altura.setText(usuario.getAltura().toString());
         idade.setText(usuario.getIdade());
         sexo.setText(usuario.getSexo());
         docid.setText(String.valueOf(usuario.getDocId()));

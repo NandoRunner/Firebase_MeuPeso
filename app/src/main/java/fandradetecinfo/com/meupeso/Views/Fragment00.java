@@ -18,11 +18,8 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
@@ -130,9 +127,11 @@ public class Fragment00 extends _BaseFragment {
                                 Map<String, Object> dataToLoad = document.getData();
 
                                 usuario.setNome(dataToLoad.get("nome").toString());
-                                usuario.setAltura(dataToLoad.get("altura").toString());
+                                usuario.setAltura((Double)dataToLoad.get("altura"));
                                 usuario.setSexo(dataToLoad.get("sexo").toString());
                                 usuario.setDataNascimento((Date)dataToLoad.get("data_nascimento"));
+                                usuario.setNum_registros((Long)dataToLoad.get("num_registros"));
+                                usuario.setPeso_medio(Double.parseDouble(dataToLoad.get("peso_medio").toString()));
                                 usuario.setDocId(document.getId());
 
                                 UsuarioController.getInstance().getMapUsuario().put(
@@ -149,6 +148,10 @@ public class Fragment00 extends _BaseFragment {
                             UsuarioAdapter adapter = new UsuarioAdapter(listUsuario, getActivity());
 
                             minhaLista.setAdapter(adapter);
+
+                            if (MainActivity.isBlank(MainActivity.usuario)) {
+                                MainActivity.usuario = listUsuario.get(0).getNome();
+                            }
                         } else {
                             Log.d("LogX " + TAG, "Error getting documents: ", task.getException());
                         }
@@ -169,7 +172,7 @@ public class Fragment00 extends _BaseFragment {
 
     private void tratarAdicionarUsuario()
     {
-        Intent objIntent = new Intent(getActivity(), UsuarioActivity.class);
+            Intent objIntent = new Intent(getActivity(), UsuarioActivity.class);
         startActivity(objIntent);
     }
 

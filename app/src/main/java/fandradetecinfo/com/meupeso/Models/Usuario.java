@@ -3,6 +3,7 @@ package fandradetecinfo.com.meupeso.Models;
 import android.content.Context;
 
 import java.io.Serializable;
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.util.Date;
 
@@ -19,8 +20,10 @@ public class Usuario extends _BaseModel implements Serializable  {
 
     private String nome;
     private String sexo;
-    private String altura;
+    private Double altura;
     private Date data_nascimento;
+    private Double peso_medio;
+    private Long num_registros;
 
     public long getId() {
         return id;
@@ -38,6 +41,8 @@ public class Usuario extends _BaseModel implements Serializable  {
     {
         super(ctx);
         //this.table = "usuario";
+        peso_medio = 0.0;
+        num_registros = Long.parseLong("0");
     }
 
 
@@ -49,7 +54,7 @@ public class Usuario extends _BaseModel implements Serializable  {
         return sexo;
     }
 
-    public String getAltura() {
+    public Double getAltura() {
         return altura;
     }
 
@@ -65,12 +70,44 @@ public class Usuario extends _BaseModel implements Serializable  {
         this.sexo = sexo;
     }
 
-    public void setAltura(String altura) {
-        this.altura = altura.replace(',', '.');
+    public void setAltura(Double altura) {
+        this.altura = altura;
     }
 
     public void setDataNascimento(Date dataNascimento) {
         this.data_nascimento = dataNascimento;
+    }
+
+    public Double getPeso_medio() {
+        return peso_medio;
+    }
+
+    public void setPeso_medio(Double peso_medio) {
+        this.peso_medio = peso_medio;
+    }
+
+    public Long getNum_registros() {
+        return num_registros;
+    }
+
+    public void setNum_registros(Long num_registros) {
+        this.num_registros = num_registros;
+    }
+
+    public String getPeso_medioFormatado()
+    {
+        double d = getPeso_medio();
+
+        return new DecimalFormat("0.##").format(d).toString();
+
+    }
+
+    public String getIMC()
+    {
+        double d = getPeso_medio()/(getAltura()*getAltura());
+
+        return new DecimalFormat("0.00").format(d).toString();
+
     }
 
     public String getIdade() {

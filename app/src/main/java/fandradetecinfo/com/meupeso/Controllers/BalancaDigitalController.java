@@ -1,9 +1,6 @@
 package fandradetecinfo.com.meupeso.Controllers;
 
 import android.app.Activity;
-import android.content.ContentValues;
-import android.content.Context;
-import android.database.Cursor;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -15,19 +12,20 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.text.SimpleDateFormat;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 import fandradetecinfo.com.meupeso.MainActivity;
 import fandradetecinfo.com.meupeso.Models.BalancaDigital;
+import fandradetecinfo.com.meupeso.Models.Usuario;
 import fandradetecinfo.com.meupeso.R;
 import fandradetecinfo.com.meupeso.Relatorio;
+import fandradetecinfo.com.meupeso.Views.Fragment00;
 import fandradetecinfo.com.meupeso.Views.Fragment01;
 
 public class BalancaDigitalController extends _BaseController {
@@ -164,8 +162,9 @@ public class BalancaDigitalController extends _BaseController {
                 Log.d("LogX: " + TAG, "documento salvo");
             }
         });
-		
-}
+
+        UsuarioController.getInstance().atualizar(Double.parseDouble(model.getPeso()));
+    }
 
     public void carregarGrid(List<String> listHeader, GridView gridViewHeader, GridView gridView, Relatorio rel)
     {
@@ -179,58 +178,52 @@ public class BalancaDigitalController extends _BaseController {
         //model.open();
         try
         {
-            //Cursor c;
-            int maxcol = 5;
-
-            switch (rel)
+            if (rel == Relatorio.Totais)
             {
-                case Registros:
-                    //c = model.exibirRegistros(MainActivity.usuario);
-                    break;
+                NumberFormat formatter = new DecimalFormat("00");
 
-                case Medias:
-                    //c = model.exibirMedias(MainActivity.usuario);
-                    break;
+                Iterator<Usuario> usuIterator = Fragment00.listUsuario.iterator();
+                while (usuIterator.hasNext()) {
 
-                default:
-                    //c = model.exibirTotais();
-                    maxcol = 6;
-                    break;
-            }
+                    Usuario reg = usuIterator.next();
 
-            Iterator<BalancaDigital> regIterator = Fragment01.listRegistro.iterator();
+                    list.add(reg.getDocId());
+                    list.add(reg.getNome());
+                    list.add(reg.getSexo());
+                    list.add(reg.getPeso_medioFormatado());
+                    list.add(reg.getIMC());
+                    list.add(reg.getNum_registros().toString());
 
-//            if(c.moveToFirst())
-//            {
-//                do
-//                {
-//                    for (int i = 0; i < maxcol; i++) {
-//
-//                        if (c.getColumnName(i).equals("sexo"))
-//                            list.add(mapSexo.get(Integer.valueOf(c.getString(i))));
-//                        else
-//                            list.add(c.getString(i));
-//                    }
-//                    gridView.setAdapter(adapter);
-//                }while(c.moveToNext());
-//            }
-            if(regIterator.hasNext())
-            {
-                while (regIterator.hasNext()) {
-
-                    BalancaDigital reg = regIterator.next();
-                    list.add(reg.getDataFormatada(reg.getData_registro()).toString());
-                    list.add(reg.getPeso());
-                    list.add(reg.getGordura());
-                    list.add(reg.getHidratacao());
-                    list.add(reg.getMusculo());
                     gridView.setAdapter(adapter);
                 }
+
             }
-            else
-            {
-                Toast.makeText(activity, "Nenhum registro encontrado", Toast.LENGTH_SHORT).show();
-                Log.i("LogX", "Nenhum registro encontrado");
+            else if (rel == Relatorio.Registros){
+                Iterator<BalancaDigital> regIterator = Fragment01.listRegistro.iterator();
+
+                if (regIterator.hasNext()) {
+                    while (regIterator.hasNext()) {
+
+                        BalancaDigital reg = regIterator.next();
+
+                        if (!reg.getId_usuario().equals(UsuarioController.getInstance()
+                                .getMapUsuario()
+                                .get(MainActivity.usuario).toString())) {
+                            continue;
+                        }
+
+                        list.add(reg.getDataFormatada(reg.getData_registro()).toString());
+                        list.add(reg.getPeso());
+                        list.add(reg.getGordura());
+                        list.add(reg.getHidratacao());
+                        list.add(reg.getMusculo());
+
+                        gridView.setAdapter(adapter);
+                    }
+                } else {
+                    Toast.makeText(activity, "Nenhum registro encontrado", Toast.LENGTH_SHORT).show();
+                    Log.i("LogX", "Nenhum registro encontrado");
+                }
             }
         }catch(Exception e)
         {
