@@ -52,6 +52,10 @@ public class BalancaDigitalController extends _BaseController {
     private EditText etOsso;
     private Spinner spUsuario;
 
+    private Double lastPeso;
+    private String lastIdUsuario;
+
+
     private BalancaDigitalController() {
         super();
         this.TAG = "BalancaDigital";
@@ -88,6 +92,14 @@ public class BalancaDigitalController extends _BaseController {
 
     public void setModel(BalancaDigital model) {
         this.model = model;
+    }
+
+    public Double getLastPeso() {
+        return lastPeso;
+    }
+
+    public String getLastIdUsuario() {
+        return lastIdUsuario;
     }
 
     public void pegarDoFormulario()
@@ -143,9 +155,13 @@ public class BalancaDigitalController extends _BaseController {
         montarAlerta("Meu Peso Diário ->  Gravar", "Usuário/Data já possui registro!");
     }
 
+   public void apagar() {
+
+   }
+   
+
     public void inserir()
     {
-		FirebaseFirestore firestore = FirebaseFirestore.getInstance();
 
         Map<String, Object> dataToSave = new HashMap<String, Object>();
         dataToSave.put("id_usuario", model.getId_usuario());
@@ -156,14 +172,19 @@ public class BalancaDigitalController extends _BaseController {
         dataToSave.put("musculo", model.getMusculo());
 		dataToSave.put("osso", model.getOsso());
 
-        firestore.collection(TAG).add(dataToSave).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+		lastIdUsuario = model.getId_usuario();
+		lastPeso = Double.parseDouble(model.getPeso());
+
+        FirebaseFirestore.getInstance().collection(TAG)
+			.add(dataToSave)
+			.addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
                 Log.d("LogX: " + TAG, "documento salvo");
+                UsuarioController.getInstance()
+                        .atualizar(lastIdUsuario, lastPeso);
             }
         });
-
-        UsuarioController.getInstance().atualizar(Double.parseDouble(model.getPeso()));
     }
 
     public void carregarGrid(List<String> listHeader, GridView gridViewHeader, GridView gridView, Relatorio rel)

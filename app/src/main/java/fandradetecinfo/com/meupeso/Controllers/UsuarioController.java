@@ -125,11 +125,11 @@ public class UsuarioController extends _BaseController {
         montarAlerta("Meu Peso Diário ->  Excluir Usuário", "Usuário possui registros!");
     }
 
-    public void atualizar(Double peso) {
+    public void atualizar(String id_usuario, Double peso) {
 
         novo_peso = peso;
 
-        itemsRef.document(getModel().getDocId())
+        itemsRef.document(id_usuario)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
@@ -139,11 +139,13 @@ public class UsuarioController extends _BaseController {
 
                             Map<String, Object> dataToLoad = task.getResult().getData();
 
-                            Integer num_registros = (Integer) dataToLoad.get("num_registros");
+                            Long num_registros = (Long) dataToLoad.get("num_registros");
                             Double peso_medio = (Double) dataToLoad.get("peso_medio");
 
                             peso_medio = ((peso_medio * num_registros) + novo_peso) / (++num_registros);
 
+
+                            // todo bug here
                             DocumentReference docRef = task.getResult().getDocumentReference(task.getResult().getId());
 
                             docRef.update("num_registros", num_registros);

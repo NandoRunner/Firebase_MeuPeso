@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fandradetecinfo.com.meupeso"
     android:installLocation="preferExternal"
-    android:versionCode="29"
+    android:versionCode="40"
     android:versionName="1.0" >
 
     <uses-sdk

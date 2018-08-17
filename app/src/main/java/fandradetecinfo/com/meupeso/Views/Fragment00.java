@@ -143,7 +143,6 @@ public class Fragment00 extends _BaseFragment {
                                 Log.d("LogX " + TAG, document.getId() + " => " + document.getData());
                             }
 
-                            //montarMapUsuario();
 
                             UsuarioAdapter adapter = new UsuarioAdapter(listUsuario, getActivity());
 

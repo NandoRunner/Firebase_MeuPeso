@@ -163,10 +163,10 @@ public class RegistroActivity extends _BaseActivity
                 return false;
             }
 
-            if(prefs.registroAnteriorIdentico(BalancaDigitalController.getInstance().getModel())) {
-                BalancaDigitalController.getInstance().alertarRegistroAnteriorIdentico();
-                return false;
-            }
+//            if(prefs.registroAnteriorIdentico(BalancaDigitalController.getInstance().getModel())) {
+//                BalancaDigitalController.getInstance().alertarRegistroAnteriorIdentico();
+//                return false;
+//            }
 
             BalancaDigitalController.getInstance().inserir();
 

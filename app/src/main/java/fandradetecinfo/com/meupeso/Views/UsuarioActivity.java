@@ -87,6 +87,7 @@ public class UsuarioActivity extends _BaseActivity
 
             UsuarioController.getInstance().inserir();
 
+            Log.i("LogX", "Usuario gravado!");
             return true;
         }
         catch (Exception e)
