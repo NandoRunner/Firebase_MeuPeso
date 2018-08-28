@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "E:\\DEV\\GitHub-Projs\\MeuPeso\\MeuPeso\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Fernando\\.gradle\\caches\\transforms-1\\files-1.1\\design-23.4.0.aar\\c011238a3a4a5160cf4db714547487d1\\res\\values-land\\values-land.xml",

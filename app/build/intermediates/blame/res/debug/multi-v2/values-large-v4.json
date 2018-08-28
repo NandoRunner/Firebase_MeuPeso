@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
+            "outputFile": "E:\\DEV\\GitHub-Projs\\MeuPeso\\MeuPeso\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Fernando\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\0d0a963dc0d183cf82f89f3cad986a7c\\res\\values-large-v4\\values-large-v4.xml",

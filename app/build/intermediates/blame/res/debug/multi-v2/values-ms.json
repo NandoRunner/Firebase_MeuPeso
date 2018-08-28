@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ms\\values-ms.xml",
+            "outputFile": "E:\\DEV\\GitHub-Projs\\MeuPeso\\MeuPeso\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ms\\values-ms.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Fernando\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.8.0.aar\\e928a3aaacc0bcd8d60ea2d3165c513f\\res\\values-ms\\values.xml",

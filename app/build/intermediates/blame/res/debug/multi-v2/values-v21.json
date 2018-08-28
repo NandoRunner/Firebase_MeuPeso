@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "E:\\DEV\\GitHub-Projs\\MeuPeso\\MeuPeso\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
-                    "source": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\src\\main\\res\\values-v21\\styles.xml",
+                    "source": "E:\\DEV\\GitHub-Projs\\MeuPeso\\MeuPeso\\app\\src\\main\\res\\values-v21\\styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

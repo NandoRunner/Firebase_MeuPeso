@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
+            "outputFile": "E:\\DEV\\GitHub-Projs\\MeuPeso\\MeuPeso\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
             "map": [
                 {
-                    "source": "E:\\OneDrive\\Documents\\Fernando\\Projs\\FAndradeTecInfo\\_Android\\_Firebase\\MeuPeso\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "source": "E:\\DEV\\GitHub-Projs\\MeuPeso\\MeuPeso\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "4",
