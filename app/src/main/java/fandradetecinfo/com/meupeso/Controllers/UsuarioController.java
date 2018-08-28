@@ -49,6 +49,7 @@ public class UsuarioController extends _BaseController {
     }
 
     private Double novo_peso;
+    private String novo_id_usuario;
 
     public void init(Activity activity)
     {
@@ -128,6 +129,7 @@ public class UsuarioController extends _BaseController {
     public void atualizar(String id_usuario, Double peso) {
 
         novo_peso = peso;
+        novo_id_usuario = id_usuario;
 
         itemsRef.document(id_usuario)
                 .get()
@@ -144,13 +146,8 @@ public class UsuarioController extends _BaseController {
 
                             peso_medio = ((peso_medio * num_registros) + novo_peso) / (++num_registros);
 
-
-                            // todo bug here
-                            DocumentReference docRef = task.getResult().getDocumentReference(task.getResult().getId());
-
-                            docRef.update("num_registros", num_registros);
-                            docRef.update("peso_medio", peso_medio);
-
+                            itemsRef.document(novo_id_usuario).update("num_registros", num_registros);
+                            itemsRef.document(novo_id_usuario).update("peso_medio", peso_medio);
 
                             Log.d("LogX " + TAG, task.getResult().getId() + " => " + task.getResult().getData());
                         } else {
