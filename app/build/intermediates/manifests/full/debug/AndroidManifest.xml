@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fandradetecinfo.com.meupeso"
     android:installLocation="preferExternal"
-    android:versionCode="49"
+    android:versionCode="83"
     android:versionName="1.0" >
 
     <uses-sdk
@@ -49,6 +49,10 @@
             android:parentActivityName="fandradetecinfo.com.meupeso.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
@@ -106,6 +110,9 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
     </application>
 
 </manifest>
