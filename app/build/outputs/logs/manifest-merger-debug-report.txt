@@ -10,7 +10,6 @@ MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Fe
 MERGED from [com.android.support:recyclerview-v7:23.4.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-23.4.0.aar\d71e10b27507c46a47a964b8975bb4d8\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-23.4.0.aar\f8805cca3e501d64cae4c93ea73e174b\AndroidManifest.xml:2:1-9:12
 MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-23.4.0.aar\3e6d86d9037c0a22bb0853d5c4378913\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-firestore:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-firestore-11.8.0.aar\d38ac6529e8423a5ad885f2bf677af7e\AndroidManifest.xml:2:1-8:12
 MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\cdf8eebd5e8aa2fd134bd04785b4cb49\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\0cfed4f11f7b239b05e6fb9570384df2\AndroidManifest.xml:17:1-54:12
 MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\962de7afdde90ae169cc5b31030649c2\AndroidManifest.xml:17:1-40:12
@@ -27,8 +26,8 @@ MERGED from [com.android.support:support-compat:25.2.0] C:\Users\Fernando\.gradl
 MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.8.0.aar\3359907360bd1fdc98233f346f1a5082\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\e82586d7872060496c5e5014094b811f\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\206cdec0bdcc9a769747a3117986a712\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\75ef912160d3d49d6d493ca40153a364\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\ab5611ee81ba59fbd10f24939c7702b4\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\75ef912160d3d49d6d493ca40153a364\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\5bfb7a94113aba0dd0d7ea0c91ed7ed1\AndroidManifest.xml:2:1-6:12
 INJECTED from E:\DEV\GitHub-Projs\MeuPeso\MeuPeso\app\src\main\AndroidManifest.xml:2:1-39:12
 INJECTED from E:\DEV\GitHub-Projs\MeuPeso\MeuPeso\app\src\main\AndroidManifest.xml:2:1-39:12
@@ -103,10 +102,10 @@ MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Us
 MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\e82586d7872060496c5e5014094b811f\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\206cdec0bdcc9a769747a3117986a712\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\206cdec0bdcc9a769747a3117986a712\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\75ef912160d3d49d6d493ca40153a364\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\75ef912160d3d49d6d493ca40153a364\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\ab5611ee81ba59fbd10f24939c7702b4\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\ab5611ee81ba59fbd10f24939c7702b4\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\75ef912160d3d49d6d493ca40153a364\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\75ef912160d3d49d6d493ca40153a364\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\5bfb7a94113aba0dd0d7ea0c91ed7ed1\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\5bfb7a94113aba0dd0d7ea0c91ed7ed1\AndroidManifest.xml:5:5-20
 	android:supportsRtl
@@ -173,8 +172,6 @@ MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Ferna
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-23.4.0.aar\f8805cca3e501d64cae4c93ea73e174b\AndroidManifest.xml:5:5-44
 MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-23.4.0.aar\3e6d86d9037c0a22bb0853d5c4378913\AndroidManifest.xml:5:5-43
 MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-23.4.0.aar\3e6d86d9037c0a22bb0853d5c4378913\AndroidManifest.xml:5:5-43
-MERGED from [com.google.firebase:firebase-firestore:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-firestore-11.8.0.aar\d38ac6529e8423a5ad885f2bf677af7e\AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-firestore:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-firestore-11.8.0.aar\d38ac6529e8423a5ad885f2bf677af7e\AndroidManifest.xml:6:5-44
 MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\cdf8eebd5e8aa2fd134bd04785b4cb49\AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\cdf8eebd5e8aa2fd134bd04785b4cb49\AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\0cfed4f11f7b239b05e6fb9570384df2\AndroidManifest.xml:20:5-44
@@ -207,10 +204,10 @@ MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Us
 MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\e82586d7872060496c5e5014094b811f\AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\206cdec0bdcc9a769747a3117986a712\AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\206cdec0bdcc9a769747a3117986a712\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\75ef912160d3d49d6d493ca40153a364\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\75ef912160d3d49d6d493ca40153a364\AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\ab5611ee81ba59fbd10f24939c7702b4\AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\ab5611ee81ba59fbd10f24939c7702b4\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\75ef912160d3d49d6d493ca40153a364\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\75ef912160d3d49d6d493ca40153a364\AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\5bfb7a94113aba0dd0d7ea0c91ed7ed1\AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Fernando\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\5bfb7a94113aba0dd0d7ea0c91ed7ed1\AndroidManifest.xml:4:5-43
 INJECTED from E:\DEV\GitHub-Projs\MeuPeso\MeuPeso\app\src\main\AndroidManifest.xml
