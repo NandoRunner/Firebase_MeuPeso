@@ -227,9 +227,7 @@ public class BalancaDigitalController extends _BaseController {
 
                         BalancaDigital reg = regIterator.next();
 
-                        if (!reg.getId_usuario().equals(UsuarioController.getInstance()
-                                .getMapUsuario()
-                                .get(MainActivity.usuario).toString())) {
+                        if (!reg.getId_usuario().equals(MainActivity.usuarioId)) {
                             continue;
                         }
 

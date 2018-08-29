@@ -27,6 +27,7 @@ import java.util.Date;
 import java.util.List;
 
 import fandradetecinfo.com.meupeso.Controllers.BalancaDigitalController;
+import fandradetecinfo.com.meupeso.Controllers.UsuarioController;
 import fandradetecinfo.com.meupeso.MainActivity;
 import fandradetecinfo.com.meupeso.PrefsHandler;
 import fandradetecinfo.com.meupeso.R;
@@ -48,6 +49,7 @@ public class RegistroActivity extends _BaseActivity
         prefs = new PrefsHandler(ctx);
 
         mySpinner = (Spinner) findViewById(R.id.spinnerUsuario);
+
 
         FirebaseFirestore firestore = FirebaseFirestore.getInstance();
 
@@ -73,9 +75,9 @@ public class RegistroActivity extends _BaseActivity
         mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
-
-                MainActivity.usuario = (String)parent.getAdapter().getItem(position);
-                prefs.carregar(findViewById(android.R.id.content), MainActivity.usuario);
+                MainActivity.usuarioNome = (String)parent.getAdapter().getItem(position);
+                MainActivity.usuarioId = UsuarioController.getInstance().getMapUsuario().get(MainActivity.usuarioNome);
+                prefs.carregar(findViewById(android.R.id.content), MainActivity.usuarioId);
             }
 
             @Override
