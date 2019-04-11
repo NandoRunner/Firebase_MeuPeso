@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-[{"outputType":{"type":"PROCESSED_RES"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":56,"versionName":"1.0","enabled":true,"outputFile":"app-debug.apk","fullName":"debug","baseName":"debug"},"path":"resources-debug.ap_","properties":{"packageId":"fandradetecinfo.com.meupeso","split":"","minSdkVersion":"19"}}]
-=======
-[{"outputType":{"type":"PROCESSED_RES"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":86,"versionName":"1.0","enabled":true,"outputFile":"app-debug.apk","fullName":"debug","baseName":"debug"},"path":"resources-debug.ap_","properties":{"packageId":"fandradetecinfo.com.meupeso","split":"","minSdkVersion":"19"}}]
->>>>>>> 6c980584ecb018ad848f238096451e08573558d0
