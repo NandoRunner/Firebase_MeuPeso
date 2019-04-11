@@ -7,7 +7,7 @@ import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.util.Date;
 
-import fandradetecinfo.com.myjavacorelib.DateUtil;
+import com.fandradetecinfo.myjavalib.DateUtil;
 
 /**
  * Created by Fernando on 10/02/2017.

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\DEV\\GitHub-Projs\\MeuPeso\\MeuPeso\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
+            "outputFile": "C:\\_Cloud\\Projs\\GitHub\\MeuPeso\\MeuPesoApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Fernando\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.4.0.aar\\0d0a963dc0d183cf82f89f3cad986a7c\\res\\values-v18\\values-v18.xml",
+                    "source": "C:\\Users\\ferna\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\81920da77c8b228ca790d978be5108fd\\res\\values-v18\\values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
