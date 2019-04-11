@@ -15,7 +15,8 @@ import fandradetecinfo.com.meupeso.Views.Fragment04;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static String usuario;
+    public static String usuarioId;
+    public static String usuarioNome;
     public static int posFragment = 1;
     private ViewPager pager;
 

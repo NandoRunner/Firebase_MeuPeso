@@ -29,7 +29,7 @@ public class Fragment03 extends Fragment {
         vw = inflater.inflate(R.layout.frag_03, container, false);
 
         TextView tv = (TextView) vw.findViewById(R.id.tvFrag03);
-        tv.setText(getArguments().getString("msg") + MainActivity.usuario);
+        tv.setText(getArguments().getString("msg") + MainActivity.usuarioNome);
 
         BalancaDigitalController.getInstance().init(getActivity());
 

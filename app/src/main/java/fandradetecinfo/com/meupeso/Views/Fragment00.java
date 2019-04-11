@@ -79,8 +79,9 @@ public class Fragment00 extends _BaseFragment {
         {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                MainActivity.usuario = UsuarioController.getInstance().getMapUsuario().get(usuarioSelecionado.getNome());
-                String msg = "Usuário " + MainActivity.usuario + " selecionado!";
+                MainActivity.usuarioNome = usuarioSelecionado.getNome();
+                MainActivity.usuarioId = usuarioSelecionado.getDocId();
+                String msg = "Usuário " + MainActivity.usuarioNome + " selecionado!";
                 Toast.makeText(getActivity(), msg, Toast.LENGTH_LONG).show();
                 return false;
             }
@@ -148,8 +149,9 @@ public class Fragment00 extends _BaseFragment {
 
                             minhaLista.setAdapter(adapter);
 
-                            if (MainActivity.isBlank(MainActivity.usuario)) {
-                                MainActivity.usuario = listUsuario.get(0).getNome();
+                            if (MainActivity.isBlank(MainActivity.usuarioNome)) {
+                                MainActivity.usuarioNome = listUsuario.get(0).getNome();
+                                MainActivity.usuarioId = listUsuario.get(0).getDocId();
                             }
                         } else {
                             Log.d("LogX " + TAG, "Error getting documents: ", task.getException());
