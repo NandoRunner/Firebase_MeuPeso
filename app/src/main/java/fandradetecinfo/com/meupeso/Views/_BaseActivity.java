@@ -11,6 +11,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.TimeZone;
 
+import fandradetecinfo.com.meupeso.MainActivity;
 import fandradetecinfo.com.meupeso.R;
 
 public abstract class _BaseActivity extends AppCompatActivity {
@@ -27,6 +28,7 @@ public abstract class _BaseActivity extends AppCompatActivity {
         );
 
         mySpinner.setAdapter(adapter);
+        mySpinner.setSelection(spinnerArray.indexOf(MainActivity.usuarioNome));
     }
 
     protected DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener()

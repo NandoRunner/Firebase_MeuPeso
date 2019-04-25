@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -28,6 +29,7 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
+import fandradetecinfo.com.meupeso.BuildConfig;
 import fandradetecinfo.com.meupeso.Controllers.UsuarioController;
 import fandradetecinfo.com.meupeso.MainActivity;
 import fandradetecinfo.com.meupeso.Models.Usuario;
@@ -61,6 +63,10 @@ public class Fragment00 extends _BaseFragment {
 		
 		minhaLista = (ListView) vw.findViewById(R.id.usuario_list);
         registerForContextMenu(minhaLista);
+
+        TextView tv = (TextView) vw.findViewById(R.id.txtVersion);
+        tv.setText(String.valueOf("Version: " + BuildConfig.VERSION_NAME));
+
 
 
         return vw;
