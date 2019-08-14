@@ -50,7 +50,6 @@ public class RegistroActivity extends _BaseActivity
 
         mySpinner = (Spinner) findViewById(R.id.spinnerUsuario);
 
-
         FirebaseFirestore firestore = FirebaseFirestore.getInstance();
 
         firestore.collection("Usuario")
