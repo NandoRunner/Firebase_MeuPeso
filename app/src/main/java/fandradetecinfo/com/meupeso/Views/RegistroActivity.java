@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.facebook.login.LoginManager;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -120,8 +121,8 @@ public class RegistroActivity extends _BaseActivity
     {
         Intent objIntent = new Intent(this, UsuarioActivity.class);
         startActivity(objIntent);
-    }
 
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)

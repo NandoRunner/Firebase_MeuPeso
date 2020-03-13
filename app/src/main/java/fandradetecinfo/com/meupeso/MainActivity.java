@@ -6,12 +6,22 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
 
 import fandradetecinfo.com.meupeso.Views.Fragment00;
 import fandradetecinfo.com.meupeso.Views.Fragment01;
 import fandradetecinfo.com.meupeso.Views.Fragment02;
 import fandradetecinfo.com.meupeso.Views.Fragment03;
 import fandradetecinfo.com.meupeso.Views.Fragment04;
+
+import com.facebook.AccessToken;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.login.LoginManager;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,10 +30,13 @@ public class MainActivity extends AppCompatActivity {
     public static int posFragment = 1;
     private ViewPager pager;
 
+    AccessToken accessToken;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Firebase.setAndroidContext(this);
 
         pager = (ViewPager) findViewById(R.id.viewPager);
         pager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
@@ -58,6 +71,21 @@ public class MainActivity extends AppCompatActivity {
         public int getCount() {
             return 5;
         }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        accessToken = AccessToken.getCurrentAccessToken();
+        if (accessToken == null) {
+            finish();
+        }
+    }
+
+    public void btnSair(View view){
+        LoginManager.getInstance().logOut();
+        finish();
     }
 
     public ViewPager getViewPager() {

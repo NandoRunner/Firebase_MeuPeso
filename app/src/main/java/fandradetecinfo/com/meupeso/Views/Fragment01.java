@@ -11,13 +11,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import com.facebook.AccessToken;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.login.LoginManager;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
+
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -32,7 +41,15 @@ import fandradetecinfo.com.meupeso.RegistroAdapter;
 
 public class Fragment01 extends _BaseFragment
 {
+    String nome;
+    String email;
+    String id;
+
+    AccessToken accessToken;
+
     PrefsHandler prefs;
+
+    private View vw;
 
     public static List<BalancaDigital> listRegistro = new ArrayList<BalancaDigital>();
 
@@ -47,7 +64,7 @@ public class Fragment01 extends _BaseFragment
 
         BalancaDigitalController.getInstance().init(getActivity());
 
-        View vw = inflater.inflate(R.layout.frag_01, container, false);
+        vw = inflater.inflate(R.layout.frag_01, container, false);
 
         FloatingActionButton fab = (FloatingActionButton) vw.findViewById(R.id.fabFrag01);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +82,34 @@ public class Fragment01 extends _BaseFragment
     @Override
     public void onResume() {
         super.onResume();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        accessToken = AccessToken.getCurrentAccessToken();
+
+        GraphRequest request = GraphRequest.newMeRequest(accessToken, new GraphRequest.GraphJSONObjectCallback() {
+            @Override
+            public void onCompleted(JSONObject object, GraphResponse response) {
+                try {
+                    nome = object.getString("name");
+                    email = object.getString("email");
+                    id = object.getString("id");
+
+                    TextView txtUsuarioLogado = (TextView) vw.findViewById(R.id.txtUsuarioLogado);
+                    txtUsuarioLogado.setText(nome);
+
+                }catch(JSONException e) {e.printStackTrace();}
+            }
+        });
+
+        Bundle parameters = new Bundle();
+        parameters.putString("fields", "id,name,email");
+        request.setParameters(parameters);
+        request.executeAsync();
+
     }
 
     @Override
@@ -133,7 +178,7 @@ public class Fragment01 extends _BaseFragment
         super.setUserVisibleHint(isVisibleToUser);
         if(isVisibleToUser) {
             Activity a = getActivity();
-            if(a != null) a.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            if(a != null) a.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         }
     }
 }
