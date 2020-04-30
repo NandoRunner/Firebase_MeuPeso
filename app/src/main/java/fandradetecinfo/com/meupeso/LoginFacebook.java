@@ -8,7 +8,6 @@ import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
-import com.facebook.FacebookSdk;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
@@ -23,13 +22,13 @@ public class LoginFacebook extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        FacebookSdk.sdkInitialize(getApplicationContext());
+        //FacebookSdk.sdkInitialize(getApplicationContext());
 
         setContentView(R.layout.activity_login_facebook);
 
         loginButton = (LoginButton) findViewById(R.id.loginButton);
 
-        loginButton.setReadPermissions(Arrays.asList("public_profile, email, user_friends"));
+        loginButton.setPermissions(Arrays.asList("public_profile, email, user_friends"));
         callbackManager = CallbackManager.Factory.create();
 
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {

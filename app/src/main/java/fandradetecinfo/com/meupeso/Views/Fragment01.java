@@ -101,6 +101,9 @@ public class Fragment01 extends _BaseFragment
                     TextView txtUsuarioLogado = (TextView) vw.findViewById(R.id.txtUsuarioLogado);
                     txtUsuarioLogado.setText(nome);
 
+                    //TODO: Buscar e exibir imagem do Facebook
+                    //aula 233 7:11
+
                 }catch(JSONException e) {e.printStackTrace();}
             }
         });

@@ -79,7 +79,7 @@ public class UsuarioActivity extends _BaseActivity
         {
             UsuarioController.getInstance().init(this);
 
-            //todo verificar se usuário já existe
+            //todo: verificar se usuário já existe
 
             if(!UsuarioController.getInstance().validarDados()) return false;
 
