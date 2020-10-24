@@ -2,11 +2,12 @@ package fandradetecinfo.com.meupeso.Controllers;
 
 import android.app.Activity;
 import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
 
 import java.util.Hashtable;
 import java.util.Map;

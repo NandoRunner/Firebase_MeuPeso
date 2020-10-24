@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MeuPesoApp.iml" filepath="$PROJECT_DIR$/MeuPesoApp.iml" group="MeuPesoApp" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="MeuPesoApp/app" />
-      <module fileurl="file://$PROJECT_DIR$/myjavalib/myjavalib.iml" filepath="$PROJECT_DIR$/myjavalib/myjavalib.iml" group="MeuPesoApp/myjavalib" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MeuPeso.iml" filepath="$PROJECT_DIR$/.idea/modules/MeuPeso.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MeuPeso.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MeuPeso.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/myjavalib/MeuPeso.myjavalib.iml" filepath="$PROJECT_DIR$/.idea/modules/myjavalib/MeuPeso.myjavalib.iml" />
     </modules>
   </component>
 </project>

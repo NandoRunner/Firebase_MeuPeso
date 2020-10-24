@@ -1,14 +1,15 @@
 package fandradetecinfo.com.meupeso.Views;
 
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.NavUtils;
 
 import fandradetecinfo.com.meupeso.Controllers.UsuarioController;
 import fandradetecinfo.com.meupeso.MainActivity;

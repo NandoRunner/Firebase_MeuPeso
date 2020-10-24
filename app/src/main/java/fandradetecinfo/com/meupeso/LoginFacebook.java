@@ -1,8 +1,9 @@
 package fandradetecinfo.com.meupeso;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
@@ -28,7 +29,7 @@ public class LoginFacebook extends AppCompatActivity {
 
         loginButton = (LoginButton) findViewById(R.id.loginButton);
 
-        loginButton.setPermissions(Arrays.asList("public_profile, email, user_friends"));
+        loginButton.setPermissions(Arrays.asList("public_profile, email"));
         callbackManager = CallbackManager.Factory.create();
 
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {

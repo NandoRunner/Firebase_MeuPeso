@@ -1,1 +1,2 @@
 include ':app', 'myjavalib'
+rootProject.name = "MeuPeso"
